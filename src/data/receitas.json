@@ -1,0 +1,23 @@
+{
+	"receitas": [{
+			"id": 1,
+			"image": "https://www.svicente.com.br/public/media/receitas/73-medium-1555956897-barrinha.jpg",
+			"bigImage": "https://www.svicente.com.br/public/media/receitas/73-1555956897-barrinha.jpg",
+			"title": "Barrinha de Cereal Caseira",
+			"badges": [{
+				"name": "180 min."
+			}],
+			"ingredientes": "- 300g de ameixa desidratada sem caroço <br> - 100g de uva passa preta <br> - 100g de castanha-do-pará <br> - 50g de coco ralado grosso",
+			"modo_preparo": "Com ajuda de um processador, bata as frutas secas, as castanhas, o óleo de coco e o coco ralado até obter uma massa homogênea. Despeje a mistura em um bowl, adicione as sementes e mexa até que sejam incorporadas à massa. Leve a mistura a uma assadeira rasa e espalhe a massa. Leve ao freezer por 2 horas, depois corte em formato de barrinhas e sirva."
+		},
+		{
+			"id": 2,
+			"image": "https://www.svicente.com.br/public/media/receitas/72-medium-1555956727-wrap_de_atum.jpg",
+			"bigImage": "https://www.svicente.com.br/public/media/receitas/72-1555956727-wrap_de_atum.jpg",
+			"title": "Wrap de Atum",
+			"badges": [{ "name": "15 min." }, { "name": "6 Porções" }],
+			"ingredientes": "1 lata de atum ralado light <br> 1/2 cenoura média ralada <br> 3 colheres de sopa de maionese light <br> 3 wraps integrais",
+			"modo_preparo": "Doure os wraps dos dois lados. <br> Misture o atum escorrido com a cenoura ralada e adicione maionese para dar cremosidade. <br> Tempere com pimenta e lave as folhas de alface. <br> Recheie os wraps, enrole e sirva."
+		}
+	]
+}

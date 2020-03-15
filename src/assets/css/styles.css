@@ -1,0 +1,52 @@
+* { padding: 0; margin: 0; box-sizing: border-box; }
+*:after, *::before { box-sizing: border-box; }
+
+a,
+a:hover { text-decoration: none; color: #000; }
+
+body, label, input, select, textarea { font-family: 'Montserrat', sans-serif; }
+
+:root{
+    --maxWidth: 1100px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+
+.row { display: flex; align-items: center; }
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8 { position: relative; padding: 0 20px 0 0; min-height: 1px; margin: 0 0 20px; } 
+.col-1 { width: 12.5%; }
+.col-2 { width: 25%; }
+.col-3 { width: 37.5%; }
+.col-4 { width: 50%; }
+.col-5 { width: 62.5%; }
+.col-6 { width: 75%; }
+.col-7 { width: 87.5%; }
+.col-8 { width: 100%; }
+.col-last { padding: 0; }
+
+.mainCarousel { width: 100%; margin: 0 0 50px; }
+.mainCarousel img { display: block; width: 100%; }
+
+.App h1 { text-align: center; color: #cf0005; font-size: 56px; }
+.App > p { text-align: center; color: #000;  font-size: 18px; }
+
+.header {  width: var(--maxWidth); margin: auto; max-width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 25px 0; }
+.header nav { display: flex; margin: 0 0 0 auto; }
+.header nav a { padding: 0 20px; color: #d3000f; }
+
+.content { width: var(--maxWidth); margin: auto; max-width: 100%; }
+
+.wrapCards { display: grid; grid-gap: 20px; grid-template-columns: repeat(auto-fill, minmax(325px, 1fr)); justify-content: space-between; margin: 0 0 50px; }
+.wrapCards .card { border: 1px solid #c9c9c8; padding: 15px 30px; }
+.wrapCards .card h3 { font-size: 20px; color: #454545; text-align: center; margin: 0 0 25px; font-weight: 300; }
+.wrapCards .card img { display: block; max-width: 100%; margin: auto; }
+
+.footer { background: #000; padding: 75px 0; }
+.footer .content { display: flex; }
+.footer .content nav { margin: 0 0 0 50px; display: flex; flex-direction: column; }
+.footer .content nav a { margin: 0 0 15px; color: #FFF; font-size: 14px; font-weight: 300; }
+.footer .content .side-right { margin: 0 0 0 auto; display: flex; flex-direction: column; justify-content: space-between; }
+.footer .content .side-right .social { display: flex; justify-content: flex-end; }
+.footer .content .side-right .social a { margin: 0 10px; }
+.footer .content .side-right p { color: #FFF; font-size: 14px; font-weight: 300; }

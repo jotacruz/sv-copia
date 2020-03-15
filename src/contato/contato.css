@@ -1,0 +1,8 @@
+.contato { padding: 0 0 50px; }
+.contato h1 { margin: 0 0 55px; }
+.contato p { margin: 0 0 15px; }
+
+.contato form .customInput { width: 100%; height: 40px; padding: 0 20px; font-size: 16px; font-weight: 300; }
+.contato form .error { border: 1px solid #cf0005; }
+.contato form textarea.customInput { height: 175px; padding: 20px; resize: none; }
+.contato form input[type='submit'] { line-height: 40px; color: #FFF; width: 200px; text-align: center; background-color: #cf0005; border: 0; cursor: pointer; border-radius: 0; font-size: 18px; font-weight: 700; }
