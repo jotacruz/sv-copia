@@ -33,10 +33,13 @@ class Index extends Component {
                     <AceptedCards title="CARTÕES ALIMENTAÇÃO ACEITOS" image="https://www.svicente.com.br/public/template/site/default/images/cartao-2.jpg" />
                     <AceptedCards title="CARTÕES - RESTAURANTES E ROTISSERIE SÃO VICENTE" image="https://www.svicente.com.br/public/template/site/default/images/cartao-3.jpg" />
                 </div>
-                <div className="listReceita">
-                    { receitas.map( item => (
-                        <ReceitaItem key={item._id} receita={item} />                        
-                    ))}
+                <div className="receitas">
+                    <h2>Receitas</h2>
+                    <div className="listReceita">
+                        { receitas.map( item => (
+                            <ReceitaItem key={item._id} receita={item} />                        
+                        ))}
+                    </div>
                 </div>
             </div>        
         );

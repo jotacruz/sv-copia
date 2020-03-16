@@ -28,7 +28,9 @@ body, label, input, select, textarea { font-family: 'Montserrat', sans-serif; }
 .mainCarousel { width: 100%; margin: 0 0 50px; }
 .mainCarousel img { display: block; width: 100%; }
 
-.App h1 { text-align: center; color: #cf0005; font-size: 56px; }
+.App h1,
+.App h2 { text-align: center; color: #cf0005; font-size: 56px; }
+.App h2 { font-size: 48px; }
 .App > p { text-align: center; color: #000;  font-size: 18px; }
 
 .header {  width: var(--maxWidth); margin: auto; max-width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 25px 0; }
@@ -41,6 +43,8 @@ body, label, input, select, textarea { font-family: 'Montserrat', sans-serif; }
 .wrapCards .card { border: 1px solid #c9c9c8; padding: 15px 30px; }
 .wrapCards .card h3 { font-size: 20px; color: #454545; text-align: center; margin: 0 0 25px; font-weight: 300; }
 .wrapCards .card img { display: block; max-width: 100%; margin: auto; }
+
+.receitas h2 { margin: 0 0 35px; }
 
 .footer { background: #000; padding: 75px 0; }
 .footer .content { display: flex; }

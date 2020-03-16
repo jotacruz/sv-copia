@@ -4,19 +4,39 @@ import './contato.css';
 export default class Contato extends Component {
     constructor(props){
         super(props);
-        this.state = { nome: '', email: '', mensagem: '', cidade: '', estado: '', assunto: '' } 
+        this.state = { formFeedbackMessage: '', nome: '', email: '', mensagem: '', cidade: '', estado: '', assunto: '' } 
 
         this.changeHandler = this.changeHandler.bind(this);
         this.blurHandler = this.blurHandler.bind(this);
         
     }
 
-    sendMessage(e){
+    async sendMessage(e){
         e.preventDefault();
 
-        const data = JSON.stringify({ nome: this.state.nome, email: this.state.email, cidade: this.state.cidade, estado: this.state.estado, assunto: this.state.assunto, mensagem: this.state.mensagem })
-        console.log(data);
-        //do post
+        const data = { nome: this.state.nome, email: this.state.email, cidade: this.state.cidade, estado: this.state.estado, assunto: this.state.assunto, mensagem: this.state.mensagem };
+        let formData = Object.keys(data).map( key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])).join('&')
+        console.log(formData);
+        const response = await fetch("http://localhost:3001/api/putContato", {
+            method: 'POST',
+            headers: {"Content-Type": "application/x-www-form-urlencoded"},
+            body: formData,
+        })
+        .then(response => {
+            this.clearFields()
+            console.log(response);
+            this.setState({ formFeedbackMessage: 'Contato enviado com sucesso' })
+        })
+        .catch(err => {
+            console.log(err);
+            this.setState({ formFeedbackMessage: 'Não foi possível enviar o contato no momento' })
+        })
+        ;
+    }
+
+    clearFields(){
+        this.setState({ ...this.state, nome: '', email: '', cidade: '', estado: '', assunto: '', mensagem: '' })
+
     }
 
     changeHandler(e){
@@ -24,8 +44,6 @@ export default class Contato extends Component {
         const value = e.target.value
 
         this.setState({ ...this.state, [name]: value })
-
-        console.log(e.target);
     }
 
     blurHandler(e){
@@ -51,6 +69,7 @@ export default class Contato extends Component {
                 <p>
                     Envie-nos sua mensagem. Teremos prazer em respondê-lo.
                 </p>
+                <p>{ this.state.formFeedbackMessage }</p>
                 <form method="post" onSubmit={ this.sendMessage.bind(this) }>
                     <div className="row">
                         <div className="col-4">

@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const logger = require('morgan')
 const Data = require('./data')
 const Receitas = require('./receitas')
+const Contatos = require('./contatos')
 
 const API_PORT = 3001
 const app = express()
@@ -80,6 +81,30 @@ router.post('/putData', (req, res) => {
   data.message = message;
   data.id = id;
   data.save((err) => {
+    if (err) return res.json({ success: false, error: err });
+    return res.json({ success: true });
+  });
+});
+
+//create contaot
+router.post('/putContato', (req, res) => {
+  let contato = new Contatos();
+
+  const { nome, email, mensagem, assunto, cidade, estado } = req.body;
+
+  if (!mensagem || !nome || !email || !assunto) {
+    return res.json({
+      success: false,
+      error: 'Preencha todos os campos obrigatórios',
+    });
+  }
+  contato.nome = nome;
+  contato.email = email;
+  contato.cidade = cidade;
+  contato.estado = estado;
+  contato.mensagem = mensagem;
+  contato.assunto = assunto;
+  contato.save((err) => {
     if (err) return res.json({ success: false, error: err });
     return res.json({ success: true });
   });
